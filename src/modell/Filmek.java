@@ -1,4 +1,4 @@
-package mvc_film;
+package modell;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,5 +31,10 @@ public class Filmek {
         //return Collections.unmodifiableList(filmek_lista); - polymorph
         List<Film> masolat= new ArrayList<>(filmek_lista);
         return masolat;
+    }
+        public void megjelenit(){
+        for (Film film : getFilmek_lista()) {
+            System.out.println(film.toString());
+        }
     }
 }

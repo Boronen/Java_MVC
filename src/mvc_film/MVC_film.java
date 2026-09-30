@@ -4,6 +4,8 @@
  */
 package mvc_film;
 
+import View.KonzolNezet;
+import modell.Filmek;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,17 +18,8 @@ public class MVC_film {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        List<Film> modosithatoFilmek = new Filmek().getFilmek_lista();
-        for (Film film : modosithatoFilmek) {
-            System.out.println("Film "+ film.toString());
-        }
-        modosithatoFilmek.add(new Film("Nem lehetne a listában!"));
-
-        List<Film> EredetiLista = new Filmek().getFilmek_lista();
-        for (Film film : EredetiLista) {
-            System.out.println("Film "+ film.toString());
-        }        
+    public static void main(String[] args) {      
+        new KonzolNezet(new Filmek().megjelenit());
     }
     
 }
