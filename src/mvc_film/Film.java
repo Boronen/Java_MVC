@@ -9,25 +9,34 @@ package mvc_film;
  * @author KovácsKevin(SZF_N_20
  */
 public class Film {
-    private String nev;
+    private String cim;
     private int megjelenesi_ev;
     private double ertekeles;
 
+    public Film(String nev) {
+        this.cim=nev;
+        this.ertekeles=0.2;
+        this.megjelenesi_ev=2003;
+    }
+
+    
     public Film(String nev, int megjelenesi_ev, double ertekeles) {
-        setNev(nev);
+        setCim(nev);
         this.megjelenesi_ev = megjelenesi_ev;
         this.ertekeles = ertekeles;
     }
 
-    public String getNev() {
-        return nev;
+    public String getCim() {
+        return cim;
     }
 
-    private void setNev(String nev) {
-        if (nev.length()<2) {
-            this.nev="Józsi Négy utja";
-        }
+private void setCim(String nev) {
+    if (nev.length() < 1) {
+        this.cim = "Józsi Négy utja";
+    } else {
+        this.cim = nev;
     }
+}
 
     public int getMegjelenesi_ev() {
         return megjelenesi_ev;
@@ -44,7 +53,12 @@ public class Film {
     public void setErtekeles(double ertekeles) {
         this.ertekeles = ertekeles;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Film{" + "cim=" + cim + ", megjelenesi_ev=" + megjelenesi_ev + ", ertekeles=" + ertekeles + '}';
+    }
+        
     
     
     
