@@ -28,7 +28,7 @@ public class Filmek {
     }
 
     public List<Film> getFilmek_lista() {
-        //return Collections.unmodifiableList(filmek_lista);
+        //return Collections.unmodifiableList(filmek_lista); - polymorph
         List<Film> masolat= new ArrayList<>(filmek_lista);
         return masolat;
     }
